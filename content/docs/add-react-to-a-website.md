@@ -80,8 +80,12 @@ After **[the starter code](https://gist.github.com/gaearon/0b180827c190fe4fd98b4
 ```js{3,4}
 // ... the starter code you pasted ...
 
-const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(e(LikeButton), domContainer);
+window.addEventListener(
+  "load", 
+  function() {
+    const domContainer = document.querySelector('#like_button_container');
+    ReactDOM.render(e(LikeButton), domContainer);
+    })
 ```
 
 These two lines of code find the `<div>` we added to our HTML in the first step, and then display our "Like" button React component inside of it. 
